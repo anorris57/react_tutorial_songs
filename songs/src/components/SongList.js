@@ -30,9 +30,9 @@ import { selectSong } from '../actions';
 }
 
 const mapStateToProps = (state) => {
-  console.log(state);
   return { songs: state.songs };
 }
 
 //connect returns function and second () invokes function that was called
+//connect function take function and passes into store.dispatch method
 export default connect(mapStateToProps, { selectSong: selectSong })(SongList);
